@@ -1,0 +1,102 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Display the datas Dynamically using Javascript</h1>
+    </center>
+    <br><br>
+    <style>
+        input 
+        {
+            border-radius: 5px;
+            border-color: black;
+            width: 12%;
+            height: 25px;
+        }
+
+        body 
+        {
+            padding-top: 70px;
+        }
+
+        button 
+        {
+            width: 7%;
+            height: 28px;
+            border-radius: 5px;
+            font-size: 15px;
+            border-color: black;
+        }
+    </style>
+    <script>
+        /*var myArr = [];
+        function Push() 
+        {
+            var txt = document.getElementById('input').value;
+            myArr.push(txt);
+            document.getElementById('display').innerHTML = myArr;
+        }
+        function Pop() 
+        {
+            var txt = document.getElementById('input').value;
+            myArr.pop(txt);
+            document.getElementById('remove').innerHTML = myArr;
+        }*/
+    </script>
+    <center>
+         <input type="text" id="input">
+        <button onclick="Push();">Add </button>
+        <button onclick="Pop();">Remove</button>
+        <p id="display"><br/></p>
+        <p id="remove"></p>
+        <script> document.getElementById('display').innerHTML = myArr;</script>
+        <script> document.getElementById('remove').innerHTML = myArr;</script>
+    </center>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add/Remove Input Field Dynamically</title>
+	<script>
+		function addInput() {
+			var newInput = document.createElement("input", "button");
+			newInput.type = "text";
+			// newInput.name = "input[]";
+			newInput.type = "button";
+			newInput.name = "button";
+			var container = document.getElementById("input-container");
+			container.appendChild(newInput,button);
+		}
+
+		function removeInput() {
+			var container = document.getElementById("input-container");
+			var lastInput = container.lastElementChild;
+			if (lastInput) {
+				container.removeChild(lastInput);
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Add/Remove Input Field Dynamically</h1>
+	<form>
+		<div id="input-container">
+            <label for="name-id">Name:</label>
+			<input type="text" name="input[]" id="name-id">
+			<button id="button" type="button" onclick="addInput()">Add Input Field</button>
+		<button  id="button"  type="button" onclick="removeInput()">Remove Input Field</button>
+		</div>
+		
+		
+	
+	</form>
+</body>
+</html>
